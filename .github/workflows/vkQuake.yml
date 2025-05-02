@@ -5,23 +5,23 @@ on:
       projectVersion:
         description: 'Project version'     
         required: true
-        default: 'v13.0x'
+        default: '1.32.2'
 jobs:
   bash-script:
-    runs-on: ubuntu-22.04
+    runs-on: macos-14
     steps:
       - name: Checkout scripts
         uses: actions/checkout@v2
       - name: Checkout project
         uses: actions/checkout@v2
         with:
-          repository: zenorogue/hyperrogue
+          repository: Novum/vkQuake
           ref: ${{github.event.inputs.projectVersion}}
           path: ./project
       - name: Build
-        run: bash ./hyperrogue-debian12/build.sh
+        run: bash ./vkQuake-M1/build.sh
       - name: Publish
         uses: actions/upload-artifact@v4
         with:
-          name: hypperrogue-${{github.event.inputs.projectVersion}}
-          path: ./project/hyperrogue
+          name: vkQuake-${{github.event.inputs.projectVersion}}
+          path: ./project/build/vkquake
