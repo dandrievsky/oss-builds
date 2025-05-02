@@ -1,4 +1,4 @@
-name: vkQuake macOS M1
+name: Hyperrogue Linux
 on:
   workflow_dispatch:
     inputs:
