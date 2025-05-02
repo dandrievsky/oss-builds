@@ -1,5 +1,5 @@
 sudo apt update
-sodo apt install make g++ libsdl1.2-dev libsdl-ttf2.0-dev libsdl-gfx1.2-dev libsdl-mixer1.2-dev libglew-dev
+sudo apt install make g++ libsdl1.2-dev libsdl-ttf2.0-dev libsdl-gfx1.2-dev libsdl-mixer1.2-dev libglew-dev
 
 # apt install curl
 # curl -LOJ "https://github.com/zenorogue/hyperrogue/archive/refs/tags/v13.0x.tar.gz"
