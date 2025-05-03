@@ -14,10 +14,16 @@ def deps(inp, res):
         for d in otool(inp):
             deps(d, res)
 
+def all_deps(inp):
+    result = set()
+    deps(exe, result)
+    result = list(result)
+    result.sort()
+    return result
+
 exe = sys.argv[1]
 print(exe, file=sys.stderr)
-d = set()
-deps(exe, d)
+lines = all_deps(exe)
 print("", file=sys.stderr)
-for line in d:
+for line in lines:
     print(line)
