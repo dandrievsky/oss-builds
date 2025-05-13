@@ -25,3 +25,4 @@ jobs:
         with:
           name: vkQuake-${{github.event.inputs.projectVersion}}
           path: ./project/build/all/
+          overwrite: true

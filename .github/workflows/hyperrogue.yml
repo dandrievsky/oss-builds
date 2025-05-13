@@ -25,3 +25,4 @@ jobs:
         with:
           name: hypperrogue-${{github.event.inputs.projectVersion}}
           path: ./project/hyperrogue
+          overwrite: true
